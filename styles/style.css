@@ -1,0 +1,342 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+     --main-color: #dc1b1b;
+     --black-color: #121212;
+     --border:  0.1rem solid rgba(255,255,255,0.3);
+}
+
+
+ *{
+     font-family: 'Poppins', sans-serif;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     outline: none;
+     border: none;
+     text-decoration: none;
+     text-transform: capitalize;
+     transition: 0.2s ease;
+ }
+
+
+/* base html codes */
+
+html {
+     font-size: 62.5%;
+     overflow-x: hidden;
+     scroll-padding-top:  9rem;
+     scroll-behavior: smooth;
+}
+
+
+
+.title{
+     font-size: 4rem;
+
+
+}
+
+
+ /*! start header section */
+.header .logo img{
+     height: 13rem;
+     width: 30rem;
+}
+
+.header{
+     background-color: white;
+     /*! put header items alongside*/
+     display: flex;
+     /*! vertical alignment*/
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 4%;
+     margin: 1.8rem 4%;
+     border-radius: 25rem;
+     box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.80);
+     /*! the header comes to be at the top while the scrollbar scrolls*/
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+
+}
+
+.header .nav_bar a {
+     margin: 0 1.3rem;
+     font-size: 1.5rem;
+     color: var(--black-color);
+     border-bottom: 0.2rem solid transparent;
+
+}
+
+
+ .header .nav_bar .active , .header .nav_bar a:hover {
+    border-color: var(--main-color);
+    padding-bottom: 0.2rem;
+
+}
+
+.header .buttons button{
+     cursor: pointer;
+     font-size: 2.4rem;
+     margin-left: 1.1rem;
+     background-color: transparent;
+}
+
+
+
+body{
+     background-color: var(--main-color);
+     height: 100vh;
+}
+
+section{
+     padding: 3.5rem 5.9%;
+
+}
+
+.btn{
+     margin-top: 1rem;
+     display: inline-block;
+     padding: 2rem 3.75rem;
+     border-radius: 25rem;
+     font-size: 1.8rem;
+     color: white;
+     background-color: var(--black-color);
+     cursor: pointer;
+
+}
+
+
+ /*! end header section */
+
+/*! start home section */
+.home{
+     min-height: 100vh;
+     background:url('../images/loginBackgroundImage.jpg')  no-repeat ;
+     background-size: cover;
+     background-position: center ;
+     margin-top: -17.3rem;
+     
+     display: flex;
+     align-items: center;
+   
+
+
+}
+
+.home .content{
+     max-width: 100rem;
+    
+}
+
+.home .content h3{
+     margin-top:2rem ;
+     font-size: 5rem; 
+     margin-left:2rem ; 
+     text-transform: uppercase;
+     color: white;
+      
+}
+
+.home .content p{
+     font-size: 3rem;
+     margin-left:2rem ; 
+     font-weight: 300;
+     line-height: 1.8;
+     padding: 1.1rem 0;
+     color:var(--black-color);
+
+
+}
+
+/*! end home section */
+
+/*! start menu section */
+.menu .box-container {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+     grid-gap: 1.5rem;
+}
+
+.menu .box-container .box {
+     padding: 3rem;
+     background-color: white;
+     border-radius: 3rem;
+     min-height: 60rem;
+     flex-direction: column;
+     align-items: flex-start;
+
+
+}
+
+
+.menu .box-container .box-head img{
+     width: 100%;
+     object-fit: cover;
+}
+
+
+
+/*! end menu section */
+
+/*! start contact section */
+.contact .row{
+     display: flex;
+     background-color: var(--black-color);
+     flex-wrap: wrap;
+     gap: 1rem;
+
+}
+
+.contact .row .map{
+     flex: 1 1 45rem;
+     width: 100%;
+     object-fit: cover;
+}
+
+.contact .row form{
+     flex: 1 1 45rem;
+     padding: 5rem 2rem;
+     text-align: center;
+}
+
+
+
+.contact .row h3{
+     text-transform: uppercase;
+     font-size: 3.6rem;
+     color: white;
+}
+
+.contact .row .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: var(--border);
+}
+
+.contact .row .inputBox i{
+     color: white;
+     font-size: 2rem;
+     padding-left: 2rem;
+}
+
+.contact .row .inputBox input{
+     width: 100%;
+     padding: 2rem;
+     font-size: 1.7rem;
+     color: white;
+     text-transform: none;
+     background: none;
+
+}
+
+.contact .row form .btn{
+     color: var(--main-color);
+     background-color: white;
+     font-weight: bold;
+}
+
+
+/*! end contact section */
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ .dinner__inner{
+     max-width: 1200px;
+     margin: auto;
+     display:flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     
+ }
+ 
+ .single__dinner {
+ padding: 10px 10px;
+ margin: 0px 30px;
+ 
+ 
+ 
+ 
+ }
+ .category__name{ 
+     padding: 15px 15px;
+     font-size: 24px;
+     
+ 
+ }
+ 
+ .dinner__name{
+     margin: 10px;
+     text-align: center;
+     font-size: larger;
+ 
+ 
+ }
+ 
+ 
+ 
+ .img__container img{
+     width: 200px;
+     height: 270px;
+     object-fit: cover;
+ 
+ }
+ 
+ .single_dinner-footer {
+     margin: 3px 0px;
+     font-size: 12px;
+     color: lightslategrey;
+ }
+ .menu__item__inner{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items:center;
+ }
+ 
+ .menu__item{
+     max-width: 1000px;
+     margin: auto;
+ }
+ 
+ .menu__header{
+     margin: 10px 0px;
+ }
+ 
+ .menu__img{
+     height:300px;
+     width: 9999999900px;
+     object-fit: contain;
+     
+    
+ }
+ 
+ .list__point {
+     margin: 5px 0px;
+   
+ }
+ 
+ .list__point a{
+     
+     text-decoration: none;
+     color: black;
+ }
+ 
+ .list__dinner {
+     list-style-type:  none;
+ }
+ 
+
+
+
+
+
+

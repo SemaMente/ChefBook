@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Chefs</title>
+    <style>
+        body {
+    text-align: center;
+    padding-top: 20px;
+    background-image: url(Images2/chefs.jpg);
+    background-size: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+  background-position-y:top;
+  font-family: 'Poppins', sans-serif;
+    color: black;
+    background-color:#f7f7f7;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.ourChefs{
+    
+    text-align: center;
+    padding-left: 10px;
+    border: #f4f1bb;
+    margin-bottom: 20px;
+    margin-top: -30px;
+    border-radius: 10px;
+
+}
+.chefNames{
+    opacity: 0.9;
+    text-align: center;
+    background-color: #dc1b1b;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 2%;
+    border: #dc1b1b;
+    border-radius: 10px ;
+    color: black;
+    margin-right: 20px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+    </style>
+</head>
+<body>
+    <div class =  "ourChefs">
+    <h1>Our Chefs</h1>
+<h3>ChefBook works with five talented chefs. Each have their own specialties and recipes.</h3> <br>
+</div>
+<br>
+<div class = "chefNames">
+<h3>Who Are You Looking For?</h3>
+<input type="text" id="chefs" onkeyup="searchModule()" placeholder="Search Chefs.."><br> <!--statement to call script function-->
+<ul id="ourChefs"  style="list-style: none">
+    <li><a href="anas.html" target = "_blank" style="color: azure;"> Anas Hamadeh </a>, <i>5.0</i> <br> Anas's specialties include <b>desserts, soups, and salads.</b></li> 
+    <br><br>
+    <li><a href="oyku.html" target = "_blank"style="color: azure;">Oyku Naz Turkmen</a>, <i>5.0</i><br> Oyku's specialties include <b>chicken dishes, vegan dishes, and fish dishes</b></li> 
+    <br><br>
+
+    <li><a href="sema.html" target = "_blank"style="color: azure;">Sema Mente </a>, <i>5.0</i> <br> Sema's specialties include <b>kids' meals, appetizers, and breakfast dishes.</b> </li> 
+    <br><br>
+    <li><a href="simge.html" target = "_blank"style="color: azure;">Simge Coban </a>, <i>5.0</i> <br> Simge's specialties include <b>seasonal dishes, beverages, and diet dishes.</b> </li> 
+    <br><br>
+    <li><a href="tugrul.html" target = "_blank"style="color: azure;">Tugrul Yavuz Ates </a>, <i>5.0</i> <br> Tugrul's specialties include <b>meat dishes, vegetable dishes, and world cuisine dishes.</b> </li>
+     <br><br>
+</ul>
+</div>
+
+<script>
+    function searchModule() { // the function allows users to search for chef names and displays results if available 
+    var userInput, txtConversion, chefList, listItem, a, i, txtValue;
+    userInput = document.getElementById("chefs"); // variable set to allow function to be called in the body section
+    txtConversion = userInput.value.toUpperCase(); // converts text to upper case to avoid confusion or error from user, can also be toLowerCase()
+    chefList = document.getElementById("ourChefs");// variable searches for user input from list 
+    listItem = chefList.getElementsByTagName("li"); // variable finds input within list items
+    for (i = 0; i < listItem.length; i++) { // loop set to allow user to type full list item letter after letter
+        a = listItem[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText; // returns user input results
+        if (txtValue.toUpperCase().indexOf(txtConversion) > -1) { // if statement set to show results from user input if available
+            listItem[i].style.display = "";
+        } else { // else statement set to show null if user input does not exist
+            listItem[i].style.display = "none"; 
+        }
+    }
+}
+</script>
+
+</body>
+</html>
